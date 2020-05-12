@@ -33,6 +33,7 @@ body, html {
   }
 
   div.col-md-3 {
+      position: right !important;
       margin-top: 10px !important;
       background-color:#11b9b1 !important;
   }

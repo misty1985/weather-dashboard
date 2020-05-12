@@ -46,7 +46,6 @@ $(document).ready(function () {
             getUVIndex(latitude, longitude)
             getForecast(name);
 
-
         })
     }
 
@@ -57,6 +56,8 @@ $(document).ready(function () {
         }).then(function (response) {
             const uvValue = response.value;
             const btnEl = $("<span>").addClass("btn btn-sm").text(uvValue);
+            latitude = document.getElementsByClassName(lat)
+            longitude = document.getElementsByClassName(lon)
 
 
             if (uvValue < 4) {
@@ -86,7 +87,23 @@ $(document).ready(function () {
         }).then(function (response) {
 
 
+
             $("#forecast").html("<h4 class=\"mt-3\">5-Day Forecast: </h4>").append("<div class=\"row\">");
+
+            for (var i = 0; i < response.list.length; i++) {
+
+                const colEl = $("<div>").addClass("col-md-2");
+                const cardEl = $("<card>").addClass("card bg-primary text white");
+                const cardBodyEl = $("<div>").addClass("card-body p-2");
+                const titleEl = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
+                const imgEl = $("<img>").attr("src", `https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png`);
+                console.log(response);
+                colEl = document.getElementBy("colEl")
+                cardEl = document.getElementBy("cardEl")
+                cardBodyEl = document.getElementBy("cardBodyEl")
+                titleEl = document.getElementBy("titleEl")
+                imgEl = document.getElementById("<img>")
+            }
 
 
         }
