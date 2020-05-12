@@ -13,6 +13,7 @@ body, html {
     display: flex;
     flex-wrap: nowrap;
     background-color: #465c9700;
+    color:#000000!important ;
   }
   
   .flex-container > h1 {
@@ -35,18 +36,20 @@ body, html {
   div.col-md-3 {
       position: right !important;
       margin-top: 10px !important;
-      background-color:#465c97 !important;
+      background-color:#465c9700 !important;
   }
 
   .btn-primary {
     color: rgb(0, 0, 0) !important;
-    background-color: #11b9b1 !important;
-    border-color: #73e0db !important;
+    background-color: #11b9b000 !important;
+    border-color: #73e0dacb !important;
+    font-weight: 500 !important;
 }
 
 .card {
     position: right !important;
-    background-color: #11b9b1 !important;
-    border: 1px solid #73e0db !important;
+    background-color: #11b9b000 !important;
+    border: 1px solid #73e0da00 !important;
+    color:#000000 !important;
     
 }
