@@ -93,7 +93,7 @@ $(document).ready(function () {
             for (var i = 0; i < response.list.length; i++) {
 
                 const colEl = $("<div>").addClass("col-md-2");
-                const cardEl = $("<card>").addClass("card bg-primary text white");
+                const cardEl = $("<card>").addClass("card");
                 const cardBodyEl = $("<div>").addClass("card-body p-2");
                 const titleEl = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
                 const imgEl = $("<img>").attr("src", `https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png`);
