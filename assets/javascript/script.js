@@ -96,9 +96,9 @@ $(document).ready(function () {
                 var cardEl = $("<card>").addClass("card");
                 var cardBodyEl = $("<div>").addClass("card-body p-2");
                 var titleEl = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
-                var imgEl = $("<img>").attr("src", `https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png`);
-                var tempEl = $("<p>").addClass("card-text").text(`Temp: ${response.list[i].main.temp_max}`);
-                var humidityEl = $("<p>").addClass("card-text").text(`Humidity: ${response.list[i].main.humidity}`)
+                const imgEl = $("<img>").attr("src", `https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png`);
+                const tempEl = $("<p>").addClass("card-text").text(`Temp: ${response.list[i].main.temp_max}`);
+                const humidEl = $("<p>").addClass("card-text").text(`Humidity: ${response.list[i].main.humidity}`)
 
 
                 forecast = $(document).getElementById("#forecast")
@@ -108,7 +108,7 @@ $(document).ready(function () {
                 titleEl = $(document).getElementsByClass("card-title")
                 imgEl = $(document).getElementById("imgEl")
                 tempEl = $(document).getElementsByClass("card-text")
-                humidityEl = $(document).getElementsByClass("card-text")
+                humidEl = $(document).getElementsByClass("card-text")
 
             }
 
