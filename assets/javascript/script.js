@@ -53,7 +53,7 @@ $(document).ready(function () {
     function getUVIndex(lat, lon) {
         $.ajax({
             type: "GET",
-            url: `http://api.openweathermap.org/data/2.5/uvi?appid=e85d398b77921ed0c04eef28b1aadb7a&lat=${lat}&lon=${lon}`
+            url: "http://api.openweathermap.org/data/2.5/uvi?appid=e85d398b77921ed0c04eef28b1aadb7a&lat={lat}&lon={lon}"
         }).then(function (response) {
             const uvValue = response.value;
             const btnEl = $("<span>").addClass("btn btn-sm").text(uvValue);
@@ -82,11 +82,11 @@ $(document).ready(function () {
     function getForecast(cityName) {
         $.ajax({
             type: "GET",
-            url: `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}cnt=5&appid=e85d398b77921ed0c04eef28b1aadb7a`
+            url: `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=e85d398b77921ed0c04eef28b1aadb7a`
         }).then(function (response) {
 
 
-            $("#forecast").html("<h4> class=\"mt-3\">5-Day Forecast: </h4>").append("<div class=\"row\">");
+            $("#forecast").html("<h4 class=\"mt-3\">5-Day Forecast: </h4>").append("<div class=\"row\">");
 
 
         }

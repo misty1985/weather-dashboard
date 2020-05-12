@@ -1,10 +1,21 @@
+body, html {
+    height: 100%;
+    background: url("https://i.imgur.com/vZujtjh.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 500 !important;
+  }
+
+
 .flex-container {
     display: flex;
     flex-wrap: nowrap;
-    background-color: DodgerBlue;
+    background-color: #11b9b1;
   }
   
-  .flex-container > div {
+  .flex-container > h1 {
     background-color: #11b9b1;
     width: 100%;
     margin-bottom: .5rem;
@@ -13,3 +24,28 @@
     font-size: 2em;
     font-weight: 500;
   }
+
+  div.col-md-9 {
+    position: right !important;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  div.col-md-3 {
+      margin-top: 10px !important;
+      background-color:#11b9b1 !important;
+  }
+
+  .btn-primary {
+    color: rgb(0, 0, 0) !important;
+    background-color: #11b9b1 !important;
+    border-color: #73e0db !important;
+}
+
+.card {
+    position: right !important;
+    background-color: #11b9b1 !important;
+    border: 1px solid #73e0db !important;
+    
+}
