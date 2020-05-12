@@ -7,8 +7,9 @@ body, html {
     background-size: cover;
     font-weight: 500 !important;
   }
-  h5{
-      color: #000000;
+  .h5, .h4{
+      background-color: #007bff00 !important;
+      color: #000000 !important;
   }
 
 .flex-container {
@@ -53,14 +54,13 @@ body, html {
     background-color: #11b9b000 !important;
     border: 1px solid #73e0da00 !important;
     color:#000000 !important;
+    width: 100% !important;
     
 }
-div, .col-md-2, .card.card-body p-2, #forecast{
+div, .row, .col-md-2, .card.card-body p-2, #forecast{
     position: relative !important;
     background-color: #73e0da00 !important;
     color: #000000;
+
 }
 
-.bg-primary {
-    background-color: #007bff00 !important;
-}
