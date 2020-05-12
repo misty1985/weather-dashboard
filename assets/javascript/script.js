@@ -25,7 +25,7 @@ $(document).ready(function () {
 
 
 
-            const titleEl = $("<h3>").addClass("card-title").text(`${name}) (${new Date().toLocalDateString()})`);
+            const titleEl = $("<h3>").addClass("card-title").text(`${name}) (${(new Date()).toLocaleDateString()})`);
 
             const cardEl = $("<div>").addClass("card");
             const cardBodyEl = $("<div>").addClass("card-body")
@@ -37,13 +37,14 @@ $(document).ready(function () {
 
 
             titleEl.append(imgEl);
-            cardEl.append(cardBodyEl, windEl, humidEl, tempEl);
+            cardEl.append(titleEl, cardBodyEl, imgEl, windEl, humidEl, tempEl);
             $("#today").append(cardEl);
 
             const latitude = response.coord.lat;
             const longitude = response.coord.lon;
             console.log(latitude, longitude)
             getUVIndex(latitude, longitude)
+            getForecast(name);
 
 
         })
@@ -54,8 +55,9 @@ $(document).ready(function () {
             type: "GET",
             url: `http://api.openweathermap.org/data/2.5/uvi?appid=e85d398b77921ed0c04eef28b1aadb7a&lat=${lat}&lon=${lon}`
         }).then(function (response) {
-            const uvEl = $("<p>").text(`UV Index: `);
+            const uvValue = response.value;
             const btnEl = $("<span>").addClass("btn btn-sm").text(uvValue);
+
 
             if (uvValue < 4) {
                 btnEl.addClass("btn-success");
@@ -73,9 +75,21 @@ $(document).ready(function () {
 
             $("#today .card-body").append(uvEl);
 
-        }
+        })
 
-    ,)
     }
 
+    function getForecast(cityName) {
+        $.ajax({
+            type: "GET",
+            url: `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}cnt=5&appid=e85d398b77921ed0c04eef28b1aadb7a`
+        }).then(function (response) {
+
+
+            $("#forecast").html("<h4> class=\"mt-3\">5-Day Forecast: </h4>").append("<div class=\"row\">");
+
+
+        }
+        )
+    }
 })
