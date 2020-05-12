@@ -98,11 +98,11 @@ $(document).ready(function () {
                 const titleEl = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
                 const imgEl = $("<img>").attr("src", `https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png`);
                 console.log(response);
-                colEl = document.getElementBy("colEl")
-                cardEl = document.getElementBy("cardEl")
-                cardBodyEl = document.getElementBy("cardBodyEl")
-                titleEl = document.getElementBy("titleEl")
-                imgEl = document.getElementById("<img>")
+                colEl = document.getElementsByClassName("col-md-2")
+                cardEl = document.getElementsByClassName("<card>")
+                cardBodyEl = document.getElementsByClassName("<div>")
+                titleEl = document.getElementsByClassName("<h5>")
+                imgEl = document.getElementsByClassName("<img>")
             }
 
 
