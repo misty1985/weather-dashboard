@@ -49,14 +49,14 @@ body, html {
 }
 
 .card {
-    position: right !important;
+    position: relative !important;
     background-color: #11b9b000 !important;
     border: 1px solid #73e0da00 !important;
     color:#000000 !important;
     
 }
 div, .col-md-2, .card.card-body p-2, #forecast{
-    position: right !important;
+    position: relative !important;
     background-color: #73e0da00 !important;
     color: #000000;
 }

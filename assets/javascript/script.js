@@ -92,18 +92,19 @@ $(document).ready(function () {
 
             for (var i = 0; i < response.list.length; i++) {
 
-                const colEl = $("<div>").addClass("col-md-2");
-                const cardEl = $("<card>").addClass("card");
-                const cardBodyEl = $("<div>").addClass("card-body p-2");
-                const titleEl = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
-                const imgEl = $("<img>").attr("src", `https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png`);
+                var colEl = $("<div>").addClass("col-md-2");
+                var cardEl = $("<card>").addClass("card");
+                var cardBodyEl = $("<div>").addClass("card-body p-2");
+                var titleEl = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
+                var imgEl = $("<img>").attr("src", `https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png`);
 
                 console.log(response);
-                colEl = document.getElementById("col-md-2")
-                cardEl = document.getElementId("<card>")
-                cardBodyEl = document.getElementById("<div>")
-                titleEl = document.getElementById("<h5>")
-                imgEl = document.getElementById("<img>")
+                forecast = document.getElementById("#forecast")
+                colEl = document.getElementsByClassName("col-md-2")
+                cardEl = document.getElementsByClassName("<card>")
+                cardBodyEl = document.getElementsByClassName("<div>")
+                titleEl = document.getElementsByClassName("<h5>")
+                imgEl = document.getElementsByClassName("<img>")
             }
 
 
