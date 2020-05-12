@@ -14,7 +14,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "GET",
-            url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=e85d398b77921ed0c04eef28b1aadb7a`
+            url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=1c224fdbde670cb6cea8a5ff1e69b8fe`
         }).then(function (response) {
             console.log(response);
             const name = response.name;
@@ -52,7 +52,7 @@ $(document).ready(function () {
     function getUVIndex(lat, lon) {
         $.ajax({
             type: "GET",
-            url: "http://api.openweathermap.org/data/2.5/uvi?appid=e85d398b77921ed0c04eef28b1aadb7a&lat={lat}&lon={lon}"
+            url: `http://api.openweathermap.org/data/2.5/uvi?appid=1c224fdbde670cb6cea8a5ff1e69b8fe&lat={lat}&lon={lon}`
         }).then(function (response) {
             const uvValue = response.value;
             const btnEl = $("<span>").addClass("btn btn-sm").text(uvValue);
@@ -83,7 +83,7 @@ $(document).ready(function () {
     function getForecast(cityName) {
         $.ajax({
             type: "GET",
-            url: `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=e85d398b77921ed0c04eef28b1aadb7a`
+            url: `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=1c224fdbde670cb6cea8a5ff1e69b8fe`
         }).then(function (response) {
 
 
@@ -101,14 +101,14 @@ $(document).ready(function () {
                 var humidityEl = $("<p>").addClass("card-text").text(`Humidity: ${response.list[i].main.humidity}`)
 
 
-                forecast = document.getElementById("#forecast")
-                colEl = document.getElementsById("colEl")
-                cardEl = document.getElementsById("cardEl")
-                cardBodyEl = document.getElementsById("cardBodyEl")
-                titleEl = document.getElementsById("titleEl")
-                imgEl = document.getElementsById("imgEl")
-                tempEl = document.getElementsById("tempEl")
-                humidityEl = document.getElementsById("humidityEl")
+                forecast = $(document).getElementById("#forecast")
+                colEl = $(document).getElementsByClass("col-md-2")
+                cardEl = $(document).getElementsByClass("card")
+                cardBodyEl = $(document).getElementsByClass("card-body p-2")
+                titleEl = $(document).getElementsByClass("card-title")
+                imgEl = $(document).getElementById("imgEl")
+                tempEl = $(document).getElementsByClass("card-text")
+                humidityEl = $(document).getElementsByClass("card-text")
 
             }
 
