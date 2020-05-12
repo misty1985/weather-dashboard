@@ -58,6 +58,7 @@ body, html {
 div, .col-md-2, .card.card-body p-2, #forecast{
     position: right !important;
     background-color: #73e0da00 !important;
+    color: #000000;
 }
 
 .bg-primary {
