@@ -97,14 +97,19 @@ $(document).ready(function () {
                 var cardBodyEl = $("<div>").addClass("card-body p-2");
                 var titleEl = $("<h5>").addClass("card-title").text(new Date(response.list[i].dt_txt).toLocaleDateString());
                 var imgEl = $("<img>").attr("src", `https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png`);
+                var tempEl = $("<p>").addClass("card-text").text(`Temp: ${response.list[i].main.temp_max}`);
+                var humidityEl = $("<p>").addClass("card-text").text(`Humidity: ${response.list[i].main.humidity}`)
 
-                console.log(response);
+
                 forecast = document.getElementById("#forecast")
-                colEl = document.getElementsByClassName("col-md-2")
-                cardEl = document.getElementsByClassName("<card>")
-                cardBodyEl = document.getElementsByClassName("<div>")
-                titleEl = document.getElementsByClassName("<h5>")
-                imgEl = document.getElementsByClassName("<img>")
+                colEl = document.getElementsById("colEl")
+                cardEl = document.getElementsById("cardEl")
+                cardBodyEl = document.getElementsById("cardBodyEl")
+                titleEl = document.getElementsById("titleEl")
+                imgEl = document.getElementsById("imgEl")
+                tempEl = document.getElementsById("tempEl")
+                humidityEl = document.getElementsById("humidityEl")
+
             }
 
 
